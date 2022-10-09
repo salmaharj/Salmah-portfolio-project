@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Salmah's Portfolio Website</title>
+</head>
+<body>
+    <nav><h2 id="logo">Salmah Ahmed</h2>
+        <ul class="navigation-items">
+            <li class="navigation-item">
+                <a href="#about-me">About Me</a>
+            </li>
+            <li class="navigation-item">
+                <a href="#projects">Projects</a>
+            </li>
+            <li class="navigation-item">
+                <a href="#skills">Skills</a>
+            </li>
+            <li class="navigation-item">
+                <a href="contact.html">Contact</a>
+            </li>
+        </ul>  
+    </nav>
+    <main>
+        <section id="about-me">
+            <div class="about-me-text-container">
+                <h2>About Me</h2>
+                <p>
+                    Hi! I'm Salmah Ahmed. In my former life I was an accountant (check my <a href="https://www.linkedin.com/in/salmah-ahmed-a2648712/?midToken=AQGXvSsaxZW0Yw&midSig=002tDeKslxuqs1&trk=eml-email_network_conversations_01-header-36-profile&trkEmail=eml-email_network_conversations_01-header-36-profile-null-pl6gu%7El8ytiusv%7Eq9-null-neptune%2Fprofile%7Evanity%2Eview"  target="_blank"> linkedIn profile </a> ) until I decided life was too short. 
+                    I am a published short story writer and a coding enthusiast. Some take up skateboarding in Iceland  à la Walter Mitty after a midlife crisis, 
+                    some like your's truly goes for a 180 degree career change. 
+                </p>
+                <p>
+                    My short story <q>Mind the Gap</q> has been published in the TMYS June 2022 Review, a print anthology by the literary magazine <a href="https://www.amazon.co.uk/TMYS-Review-June-2022-Beliefs/dp/9391800041/"  target="_blank"> Tell Me Your Story </a>  in collaboration with the Global South Colloquium, University of Victoria. 
+
+                    My short story <q>Drowning, hope</q> was shortlisted on <a href="https://blog.reedsy.com/creative-writing-prompts/author/salmah-ahmed/"  target="_blank"> Reedsyprompts. </a>                  
+                </p>
+                <p>
+                    In my free time, I love to read and normally have ten books at different stages of complettion. I am also working on my second debut novel, and querying agents for my first debut novel.
+                </p>
+                <p>
+                    I intend to make an app for authors to make the process of tracking their writing progress easier across various competetions and platforms.
+                </p>
+                <p>
+                    Fun Fact! I've been learning coding for 
+                    <span id="time-container"></span> seconds!
+                </p>
+                <img src="/images/Salmah Ahmed_pic.jpeg" alt="Salmah Ahmed picture" class="portrait">
+            </div>
+        </section>
+    </main>
+    <section id="projects">
+        <h2>Projects</h2>
+        <details class="project" open>
+        <summary class="project-title">
+            <h3>My first published short story</h3>
+        </summary>
+        <img src="/images/anthology.jpeg" alt="first-story-anthology">
+        <p class="project-description">
+            The story <q>Mind the Gap</q> discusses mental health and codepency in young adults.
+        </p>
+        </details>
+        <details class="project" open>
+            <summary class="project-title">
+            
+                <h3>My first shortlisted story</h3>
+            </summary>
+            <img src="/images/contest.jpeg" alt="contest-story">
+            <p class="project-description">
+                The story <q>Drowning, hope</q> discusses the devastating effects climate change is having around the world, especially in South Asia.
+            </p>
+            </details>
+            <details class="project" open>
+                <summary class="project-title">
+             
+                    <h3>My full time project</h3>
+                </summary>
+                <img src="/images/parisa.jpeg" alt="my-baby-girl">
+                <p class="project-description">
+                    This is my baby girl, Parisa, who is my full time project. She keeps me busy 24/7 with her songs and non-stop talking. She loves being cheeky and hates baths. 
+                </p>
+                </details>
+    </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <div id="skills-container">
+            <i class="fab fa-html5">
+               
+            </i>
+            <i class="fab fa-css3-alt">
+                
+            </i>
+            <i class="fab fa-js">
+                
+            </i>
+            <i class="fab fa-git">
+             
+            </i>
+            <i class="fab fa-github">
+              
+            </i>
+            <i class="fab fa-terminal">
+              
+            </i>
+            <i class="fab fa-chrome">
+               
+            </i>
+        </div>
+    </section>
+    <footer>
+        Made with 
+        <span class="heart">&#9829;
+        </span>
+         in London
+    </footer>
+    <script>
+    const timeContainer = document.getElementById("time-container");
+    const CODE_DAY = "1.10.2021";
+    const CODE_DAY_DATE = new Date(CODE_DAY);
+    const intlNumberFormatter = new Intl.NumberFormat("en-US");
+
+    setInterval(() => {
+      const now = new Date();
+      const difference = Math.floor(
+        (now.getTime() - CODE_DAY_DATE.getTime()) / 1000
+      );
+
+      timeContainer.innerText = intlNumberFormatter.format(difference);
+    }, 1000);
+  
+    </script>
+</body>
+</html>
